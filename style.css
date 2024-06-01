@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#grid-contenedor{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(6,1fr);
+    background-color: rgb(2, 161, 224);
+    grid-template-areas:
+    "Lateral Navegador Navegador Navegador"
+    "Lateral Contenido Contenido Contenido"
+    "Lateral Contenido Contenido Contenido"
+    "Lateral Contenido Contenido Contenido"
+    "Lateral Contenido Contenido Contenido"
+    "Lateral Contenido Contenido Contenido";
+    height: 125vh;
+}
+
+div{
+    border: 1px solid;
+    font-size: 5vh;
+    text-align: center;
+}
+
+#Lateral{
+    grid-area: Lateral;
+}
+
+#Navegador{
+    grid-area: Navegador;
+}
+
+#Contenido{
+    grid-area:Contenido;
+}
