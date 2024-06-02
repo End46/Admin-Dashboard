@@ -74,9 +74,155 @@ div{
     height: 5vh;
 }
 
+/*#Lateral .message{
+    -moz-transform: scaleX(-1); /* Firefox 
+    -o-transform: scaleX(-1); /* Opera 
+    -webkit-transform: scaleX(-1); /* Chrome y Safari 
+    transform: scaleX(-1); /* w3org 
+    filter: FlipH; /* Internet Explorer 
+    
+}*/
+
 #Navegador{
     grid-area: Navegador;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    grid-template-areas: 
+    "buscador buscador buscador buscador buscador iconos iconos iconos"
+    "usuario usuario usuario . . botones botones botones"
+    "usuario usuario usuario . . botones botones botones";
+    box-shadow: 0px 1px 5px grey;
 }
+
+#Navegador div{
+    display: flex;
+}
+
+
+#Navegador .buscador img,
+#Navegador .iconos img{
+    height: 3vh;
+    width: 3vw;
+    align-self: center;
+}
+
+#Navegador .iconos .user{
+    height: 7vh;
+    width: 4vw;
+}
+
+.buscador{
+    grid-area: buscador;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.buscador input{
+    border-radius: 25px;
+    width: 100%;
+    height: 50%;
+    align-self: center;
+    background-color: #cbd5e1;
+    border: none;
+}
+
+.buscador input:focus{
+    border: 1px solid #0284c7;
+    outline: none;
+}
+
+.iconos{
+    grid-area: iconos;
+    display: flex;
+    justify-content: flex-end;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 29vw;
+    flex-wrap: nowrap;
+
+}
+
+.iconos .notificacion:hover{
+    cursor: pointer;
+}
+
+.iconos .notificacion:active{
+    background-image: url(iconos/bell-ring.svg);
+    background-size:3vh;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.iconos .text{
+    font-size: min(1.3vw,2.3vh);
+    font-weight: bold;
+    display: flex;
+    align-self: center;
+    text-wrap: nowrap;
+    margin-left: 1vw;
+    padding-right: 2vw;
+}
+
+.usuario{
+    grid-area: usuario;
+}
+
+.usuario img{
+    height: 12vh;
+    width: 5vw;
+    align-self: center;
+}
+
+.usuario .saludo{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.usuario .saludo .texto-pequeño{
+    text-wrap: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: min(2vh,1vw);
+    font-weight: bold;
+}
+
+.usuario .saludo .texto-grande{
+    text-wrap: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: min(3vh,2vw);
+    font-weight: bold;
+}
+
+.botones{
+    grid-area: botones;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botones button{
+    background-color: #0284c7;
+    border: none;
+    border-radius: 25px;
+    height: 5vh;
+    width: 7vw;
+    font-size: min(2vh,3vw);
+    font-weight: bold;
+    color: #f0f9ff;
+}
+
+.botones button:hover{
+    cursor: pointer;
+}
+
+.botones button:active{
+    background-color: #f0f9ff;
+    color:#0284c7;
+}
+
 
 #Contenido{
     grid-area:Contenido;
